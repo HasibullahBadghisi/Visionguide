@@ -1,0 +1,8 @@
+{
+  "name": "VisionGuide",
+  "description": "An AI-powered navigation assistant for the visually impaired using Gemini Live API.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
