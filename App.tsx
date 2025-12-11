@@ -5,16 +5,23 @@ import EnvironmentCard from './components/EnvironmentCard';
 import LiveSession from './components/LiveSession';
 
 const App: React.FC = () => {
+  // Track the selected mode
   const [activeMode, setActiveMode] = useState<ModeConfig | null>(null);
+
+  // Track the EnvironmentMode explicitly (for clarity)
+  const [selectedEnvironment, setSelectedEnvironment] = useState<EnvironmentMode | null>(null);
 
   const handleModeSelect = (config: ModeConfig) => {
     setActiveMode(config);
+    setSelectedEnvironment(config.mode); // use EnvironmentMode
   };
 
   const handleExit = () => {
     setActiveMode(null);
+    setSelectedEnvironment(null);
   };
 
+  // If a mode is active, show the live session
   if (activeMode) {
     return <LiveSession mode={activeMode} onExit={handleExit} />;
   }
@@ -28,6 +35,11 @@ const App: React.FC = () => {
         <p className="text-xl text-gray-400">
           AI-Powered Navigation Assistant
         </p>
+        {selectedEnvironment && (
+          <p className="mt-2 text-gray-200">
+            Selected Environment: <span className="font-bold">{selectedEnvironment}</span>
+          </p>
+        )}
       </header>
 
       <main className="flex-grow flex flex-col justify-center">
