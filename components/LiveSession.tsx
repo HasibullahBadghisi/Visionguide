@@ -25,6 +25,7 @@ const LiveSession: React.FC<Props> = ({ mode, onExit }) => {
     }
   };
 
+<<<<<<< HEAD
   // Offline detection logic
   useEffect(() => {
     const handleOffline = () => {
@@ -62,6 +63,9 @@ const LiveSession: React.FC<Props> = ({ mode, onExit }) => {
        return;
     }
 
+=======
+  const initSession = useCallback(async () => {
+>>>>>>> 7b62cb7a56ab96ab512d967a4a275ae2ca36010f
     const apiKey = process.env.API_KEY;
     if (!apiKey) {
       setError("API Key not found in environment.");

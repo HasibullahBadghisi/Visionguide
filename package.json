@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "vision-guide",
   "private": true,
   "version": "1.0.0",
@@ -21,3 +22,26 @@
     "vite": "^5.4.1"
   }
 }
+=======
+  "name": "visionguide",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1",
+    "@google/genai": "^1.32.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.0"
+  }
+}
+>>>>>>> 7b62cb7a56ab96ab512d967a4a275ae2ca36010f
